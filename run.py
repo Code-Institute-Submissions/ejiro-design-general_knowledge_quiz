@@ -16,9 +16,10 @@ def qanda_quiz():
         choose_answer = choose_answer.upper()
         wrong_answer.append(choose_answer)
 
-        check_answer(questions_data.get(key), choose_answer)
+        right_answer += check_answer(questions_data.get(key), choose_answer)
         question_no += 1
 
+show_score(right_answer, choose_answer)
 # ___________________________________
 
 def check_answer(answer, choose_answer):
@@ -35,11 +36,11 @@ def check_answer(answer, choose_answer):
         return 0
 
 # ___________________________________
-def showscore():
-    pass
+def show_score(right_answer, choose_answer):
+    
 
 
-def playagain():
+def play_again():
     pass
 
 
