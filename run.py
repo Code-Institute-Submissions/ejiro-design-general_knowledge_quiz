@@ -12,19 +12,29 @@ def qanda_quiz():
         for option in options[question_no - 1]:
             print(option)
 
-        answers = input("enter (A,B,C or D):")
-        answers = answers.upper()
-        wrong_answer.append(answers)
+        choose_answer = input("enter (A,B,C or D):")
+        choose_answer = choose_answer.upper()
+        wrong_answer.append(choose_answer)
 
-        check_answer(questions_data.get(key).answers)
+        check_answer(questions_data.get(key), choose_answer)
         question_no += 1
 
 # ___________________________________
 
-def check_answer():
-    pass
+def check_answer(answer, choose_answer):
 
+    """
+    checking for correct or wrong answer and return a point or score
+    """
 
+    if answer == choose_answer:
+        print("correct answer:")
+        return 1
+    else:
+        print("wrong answer:")
+        return 0
+
+# ___________________________________
 def showscore():
     pass
 
@@ -48,3 +58,4 @@ options = [
 ]
 
 qanda_quiz()
+check_answer()
