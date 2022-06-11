@@ -19,7 +19,7 @@ question_data = [
 ]
 
 
-def ask_question(questions_1):
+def user_question(questions_1):
     """
     this function is to ask the user the questions and when the user gets \n
     the correct answer the score will increase by 1
@@ -32,4 +32,4 @@ def ask_question(questions_1):
     print("you got" " " + str(score) + "/" + str(len(questions_1)) + " " "correct")
 
 
-ask_question(question_data)
+user_question(question_data)

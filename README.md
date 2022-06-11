@@ -1,14 +1,10 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# GENERAL KNOWLEDGE QUIZ
 
-Welcome ejiro-design,
+This is a quiz created for everyone to test their general knowledge: **August 17, 2021**
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## Play steps
 
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+* ???
 
 ## Creating the Heroku app
 
