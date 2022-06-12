@@ -8,8 +8,7 @@ class questions:
     
 
     def Check_answer(answer):
-        if (__validate_answer__ = (answer)):
-        print("correct answer")
-        else:
-            raise  
+        if __validate_answer__ == answer:
+            print("correct answer")
+        else: 
         print("incorrect answer, try again")

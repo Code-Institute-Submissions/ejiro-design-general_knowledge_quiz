@@ -1,5 +1,7 @@
-from question import questions
-
+class questions:
+    def __init__(self, prompt, answer):
+        self.prompt = prompt
+        self.answer = answer
 """
 creating an array of question prompt for the user
 """
@@ -11,25 +13,4 @@ questions_prompt = [
     "Where was the mojito cocktail created?:\n (a) Brazil\n (b) Cuba\n (c) Coasta Rico\n (d) Poland\n" 
 ]
 
-question_data = [
-    questions(questions_prompt[0], "d"),
-    questions(questions_prompt[1], "d"),
-    questions(questions_prompt[2], "b"),
-    questions(questions_prompt[3], "b"),
-]
 
-
-def user_question(questions_1):
-    """
-    this function is to ask the user the questions and when the user gets \n
-    the correct answer the score will increase by 1
-    """
-    score = 0
-    for question in questions_1:
-        answer = input(question.prompt)
-        if answer == question.answer:
-            score += 1
-    print("you got" " " + str(score) + "/" + str(len(questions_1)) + " " "correct")
-
-
-user_question(question_data)
