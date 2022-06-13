@@ -1,19 +1,25 @@
 class questions:
+    """
+    this is a class that accept two parameters to prompt
+     and answer each question
+    """
     def __init__(self, prompt, answer):
         self.prompt = prompt
         self.answer = answer
+
 """
-creating an array of question prompt for the user
+this list the question prompt for the user
 """
+
 
 questions_prompt = [
     "What is the capital of Finland? \n (a) Tampere\n (b) Turku\n (c) Espoo\n (d) Helsinki\n",
     "How many elements are there in the periodic table?:\n (a) 120 elements\n (b) 130 elements\n (c) 112 elements\n (d) 118 elements\n",
     "What is the largest country in the world?:\n (a) United Kingdom\n (b) Russia\n (c) Canada\n (d) United State\n",
     "Where was the mojito cocktail created?:\n (a) Brazil\n (b) Cuba\n (c) Coasta Rico\n (d) Poland\n" 
-
+]
 """
-I created a 4 question prompt to store the correct answers to the question
+This question prompt stores the correct answers to the question
 """
 
 question = [
@@ -23,24 +29,40 @@ question = [
     questions(questions_prompt[3], "b"),
 ]
 
-def question_list(questions):
-"""
-create a function that contains a for loop 
-that loops through the questions list and accepts a list as a parameter.
-"""
-    for question in questions:
+
+def question_list(questiones):
+    score = 0
+    """
+    this function loops through the questions list and accepts a list as a parameter.
+    """
+    for question in questiones:
         answer = input(question.prompt)
+        if answer == questions:
+            check = check_ans(question, answer, score)
+            if check:
+                score += 1
+            return True
+        else:
+            return False
+            continue
 
-def __validate_answer__():
-        valid_choice = ("a", "b", "c", "d")
 
-def Check_answer(answer):
-    score += 0
-    if __validate_answer__ == answer:
+def check_ans(question, answer, score):
+    if answer == questions:
         score += 1
-        print("correct answer")
-    else: 
-        print("incorrect answer")
-    print("You got" + str(score) + "correct out of" + str(len(questions)))
+        print("correct")
+        return True
+    else:
+        print("incorect")
+        return False
 
-question_list(question)
+    print("You got" + " " + str(score) + " " + "correct out of" + " " + str(len(questiones)))
+
+def main():
+    """
+    run all program function
+    """
+    question_list(question)
+    check_ans(question, answer, score)
+
+main()
