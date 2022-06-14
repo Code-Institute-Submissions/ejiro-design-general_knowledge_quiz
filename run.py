@@ -22,47 +22,42 @@ questions_prompt = [
 This question prompt stores the correct answers to the question
 """
 
-question = [
+question_data = [
     questions(questions_prompt[0], "d"),
     questions(questions_prompt[1], "d"),
     questions(questions_prompt[2], "b"),
     questions(questions_prompt[3], "b"),
 ]
 
-
-def question_list(questiones):
+def user_question(questions_no):
+    """
+    this function is to ask the user the questions and when the user gets \n
+    the correct answer the score will increase by 1
+    """
+    name = input("enter your name:")
+    print("Hello", name, "welcome to the quiz:\n")
     score = 0
-    """
-    this function loops through the questions list and accepts a list as a parameter.
-    """
-    for question in questiones:
-        answer = input(question.prompt)
-        if answer == questions:
-            check = check_ans(question, answer, score)
-            if check:
-                score += 1
-            return True
-        else:
-            return False
+    for question in questions_no:
+        skip_quiz = input("would you like to skip this question?")
+        if skip_quiz == "yes":
             continue
+        answer = input(question.prompt)
+        if answer == question.answer:
+            print("Correct answer, 1 point")
+            score += 1
+            print("Your current score is:", score)
+        else: 
+            print("Wrong answer, you lost 1 point")
+            score -= 1
+            print("Your current score is:", score)
+        quit_quizs = input("do you want to quit (yes/no):")
+        if quit_quizs == "yes":
+            break
+    print("You got" " " + str(score) + "/" + str(len(questions_no)) + " " "correct")
 
-
-def check_ans(question, answer, score):
-    if answer == questions:
-        score += 1
-        print("correct")
-        return True
-    else:
-        print("incorect")
-        return False
-
-    print("You got" + " " + str(score) + " " + "correct out of" + " " + str(len(questiones)))
 
 def main():
-    """
-    run all program function
-    """
-    question_list(question)
-    check_ans(question, answer, score)
+    user_question(question_data)
+
 
 main()
