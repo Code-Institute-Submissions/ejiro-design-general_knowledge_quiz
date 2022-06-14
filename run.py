@@ -1,15 +1,14 @@
 class questions:
     """
     this is a class that accept two parameters to prompt
-     and answer each question
+     and answer each question, the question the valid choices and the answer
     """
     def __init__(self, prompt, answer):
         self.prompt = prompt
         self.answer = answer
 
-"""
-this list the question prompt for the user
-"""
+
+# this list the question prompt for the user
 
 
 questions_prompt = [
@@ -18,9 +17,9 @@ questions_prompt = [
     "What is the largest country in the world?:\n (a) United Kingdom\n (b) Russia\n (c) Canada\n (d) United State\n",
     "Where was the mojito cocktail created?:\n (a) Brazil\n (b) Cuba\n (c) Coasta Rico\n (d) Poland\n" 
 ]
-"""
-This question prompt stores the correct answers to the question
-"""
+
+# This question prompt stores the correct answers to the question
+
 
 question_data = [
     questions(questions_prompt[0], "d"),
@@ -32,14 +31,15 @@ question_data = [
 def user_question(questions_no):
     """
     this function is to ask the user the questions and when the user gets \n
-    the correct answer the score will increase by 1
+    the correct answer the score will increase by 1 or decrease, it also \n
+    gives you an option to quit the game and skip a question
     """
     name = input("enter your name:")
     print("Hello", name, "welcome to the quiz:\n")
     score = 0
     for question in questions_no:
         skip_quiz = input("would you like to skip this question?")
-        if skip_quiz == "yes":
+        if skip_quiz == "yes": 
             continue
         answer = input(question.prompt)
         if answer == question.answer:
