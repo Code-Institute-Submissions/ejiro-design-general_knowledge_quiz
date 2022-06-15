@@ -12,14 +12,10 @@ class Questions:
 
 
 questions_prompt = [
-    "What is the capital of Finland? \n (a) Tampere\n \
-    (b) Turku\n (c) Espoo\n (d) Helsinki\n",
-    "How many elements are there in the periodic table?:\n (a) 120 elements\n \
-    (b) 130 elements\n (c) 112 elements\n (d) 118 elements\n",
-    "What is the largest country in the world?:\n (a) United Kingdom\n \
-    (b) Russia\n (c) Canada\n (d) United State\n",
-    "Where was the mojito cocktail created?:\n (a) Brazil\n (b) Cuba\n \
-    (c) Coasta Rico\n (d) Poland\n"  
+    ("What is the capital of Finland? \n (a) Tampere\n (b) Turku\n (c) Espoo\n (d) Helsinki\n"),
+    ("How many elements are there in the periodic table?:\n (a) 120 elements\n (b) 130 elements\n (c) 112 elements\n (d) 118 elements\n"),
+    ("What is the largest country in the world?:\n (a) United Kingdom\n (b) Russia\n (c) Canada\n (d) United State\n"),
+    ("Where was the mojito cocktail created?:\n (a) Brazil\n (b) Cuba\n (c) Coasta Rico\n (d) Poland\n")  
 ]
 
 # This question prompt stores the correct answers to the question
@@ -58,7 +54,7 @@ def user_question(questions_no):
         quit_quizs = input("do you want to quit (yes/no):")
         if quit_quizs == "yes":
             break
-    print("You got" " " + str(score) + "/" + str(len(questions_no)) + " " "correct" )
+    print("You got" " " + str(score) + "/" + str(len(questions_no)) + " " "correct")
 
 
 def main():
