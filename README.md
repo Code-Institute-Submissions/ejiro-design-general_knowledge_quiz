@@ -52,4 +52,13 @@ Screen 5 finally displays final and total score of the user.
 * Select automatic deploy
 * Click on deploy branch
 
-## 
+## Plyint error
+![](readme_photos/screenshot_plyint.png)
+* Three errors was found
+* PascalCase name style was fixed
+* Missing function or method docstrong was not able to fix
+* Trailing whitespace was not able to fix
+
+## Credit
+Amulya's Academy, Lee Rock, Senior Data Analyst at Google, Mike Dane and Rishabh Singh.
+

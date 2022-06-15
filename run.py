@@ -1,5 +1,5 @@
 class Questions:
-    """
+    """ 
     this is a class that accept two parameters to prompt
     and answer each question, the question the valid choices and the answer
     """
