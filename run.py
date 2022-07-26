@@ -35,8 +35,16 @@ def user_question(questions_no):
     the correct answer the score will increase by 1 or decrease, it also \n
     gives you an option to quit the game and skip a question
     """
-    name = input("enter your name:")
-    print("Hello", name, "welcome to the quiz:\n")
+
+    while True:
+        name = input("enter your name:")
+        if name == name.str.isalpha():
+            print("Hello", name, "welcome to the quiz:\n")
+            print(name)
+            continue
+        else:
+            print("invalid")
+        
     score = 0
     for question in questions_no:
         skip_quiz = input("would you like to skip this question?")
