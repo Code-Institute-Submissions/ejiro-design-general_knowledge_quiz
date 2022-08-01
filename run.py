@@ -21,7 +21,7 @@ questions_prompt = [
 # This question prompt stores the correct answers to the question
 
 
-question_data = [
+Question_Data = [
     Questions(questions_prompt[0], "d"),
     Questions(questions_prompt[1], "d"),
     Questions(questions_prompt[2], "b"),
@@ -35,7 +35,6 @@ def user_question(questions_no):
     the correct answer the score will increase by 1 or decrease, it also \n
     gives you an option to quit the game and skip a question
     """
-    
     while True:
         try:
             name = input("enter your name:")
@@ -45,7 +44,6 @@ def user_question(questions_no):
                 break
         except ValueError():
             print("invalid")
-        
     score = 0
     for question in questions_no:
         skip_quiz = input("would you like to skip this question?")
@@ -70,7 +68,7 @@ def main():
     """
     display all call function
     """
-    user_question(question_data)
+    user_question(Question_Data)
 
 
 main()

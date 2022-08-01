@@ -10,7 +10,11 @@ This is a quiz created for everyone to test their general knowledge, it contains
 
 ![](readme_photos/screen1.jpg)
 
-## Play steps
+## Testing
+* Code Validation
+* code was validated in pep8onlie.com 
+* white and blank spaces was removed
+## Test cases
 
 * the user login
 * the user enters name
@@ -51,6 +55,12 @@ Screen 5 finally displays final and total score of the user.
 * Select Github and connect
 * Select automatic deploy
 * Click on deploy branch
+* - VIA GITPOD
+- - Open the Python file 
+- - Go to the debug menu and select “Add Configuration…”
+- - in the dropdown choose “Python”
+- - choose “Python File” as the debug configuration.
+- - Finally, start debugging your Python program!
 
 ## Plyint error
 ![](readme_photos/screenshot_plyint.png)
