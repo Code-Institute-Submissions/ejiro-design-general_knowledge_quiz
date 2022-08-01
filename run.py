@@ -35,13 +35,14 @@ def user_question(questions_no):
     the correct answer the score will increase by 1 or decrease, it also \n
     gives you an option to quit the game and skip a question
     """
-    name = True
+    
     while True:
         try:
             name = input("enter your name:")
-            if name.isdigit():
+            if name.isalpha():
                 print("Hello", name, "welcome to the quiz:\n")
                 print(name)
+                break
         except ValueError():
             print("invalid")
         
