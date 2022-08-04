@@ -21,7 +21,7 @@ questions_prompt = [
 # This question prompt stores the correct answers to the question
 
 
-Question_Data = [
+QUESTION_DATA = [
     Questions(questions_prompt[0], "d"),
     Questions(questions_prompt[1], "d"),
     Questions(questions_prompt[2], "b"),
@@ -37,19 +37,19 @@ def user_question(questions_no):
     """
     while True:
         try:
-            name = input("enter your name:")
-            if name.isalpha():
+            name = input("Please enter your name:")
+            if not name.isdigit():
                 print("Hello", name, "welcome to the quiz:\n")
-                print(name)
-                break
-        except ValueError():
-            print("invalid")
+                print("You have 10 questions to answer")
+                break   
+        except NameError():
+            print("invalid, please enter your name")
+
     score = 0
     for question in questions_no:
-        skip_quiz = input("would you like to skip this question?")
-        if skip_quiz == "yes": 
-            continue
-        answer = input(question.prompt)
+        skip_quiz = input("would you like to skip this question? (yes/no):")
+        if skip_quiz == "yes":
+            answer = input(question.prompt)
         if answer == question.answer:
             print("Correct answer, 1 point")
             score += 1
@@ -61,14 +61,15 @@ def user_question(questions_no):
         quit_quizs = input("do you want to quit (yes/no):")
         if quit_quizs == "yes":
             break
-    print("You got" " " + str(score) + "/" + str(len(questions_no)) + " " "correct")
+    print("You got" " " + str(score) + "/"
+    + str(len(questions_no)) + " " "correct")
 
 
 def main():
     """
     display all call function
     """
-    user_question(Question_Data)
+    user_question(QUESTION_DATA)
 
 
 main()
