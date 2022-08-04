@@ -49,7 +49,8 @@ def user_question(questions_no):
     for question in questions_no:
         skip_quiz = input("would you like to skip this question? (yes/no):")
         if skip_quiz == "yes":
-            answer = input(question.prompt)
+            continue
+        answer = input(question.prompt)
         if answer == question.answer:
             print("Correct answer, 1 point")
             score += 1
@@ -61,8 +62,7 @@ def user_question(questions_no):
         quit_quizs = input("do you want to quit (yes/no):")
         if quit_quizs == "yes":
             break
-    print("You got" " " + str(score) + "/"
-    + str(len(questions_no)) + " " "correct")
+    print("You got" " " + str(score) + "/" + str(len(questions_no)) + " " "correct")
 
 
 def main():
