@@ -36,13 +36,12 @@ def user_question(questions_no):
     gives you an option to quit the game and skip a question
     """
     while True:
-        try:
-            name = input("Please enter your name:")
-            if not name.isdigit():
-                print("Hello", name, "welcome to the quiz:\n")
-                print("You have 4 questions to answer")
-                break   
-        except NameError():
+        name = input("Please enter your name:")
+        if not name.isdigit():
+            print("Hello", name, "welcome to the quiz:\n")
+            print("You have 4 questions to answer")
+            break   
+        else:
             print("invalid, please enter your name")
 
     score = 0
