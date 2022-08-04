@@ -40,7 +40,7 @@ def user_question(questions_no):
             name = input("Please enter your name:")
             if not name.isdigit():
                 print("Hello", name, "welcome to the quiz:\n")
-                print("You have 10 questions to answer")
+                print("You have 4 questions to answer")
                 break   
         except NameError():
             print("invalid, please enter your name")
@@ -48,7 +48,7 @@ def user_question(questions_no):
     score = 0
     for question in questions_no:
         skip_quiz = input("would you like to skip this question? (yes/no):")
-        if skip_quiz == "yes":
+        if not skip_quiz == "no":
             continue
         answer = input(question.prompt)
         if answer == question.answer:
@@ -60,7 +60,7 @@ def user_question(questions_no):
             score -= 1
             print("Your current score is:", score)
         quit_quizs = input("do you want to quit (yes/no):")
-        if quit_quizs == "yes":
+        if not quit_quizs == "no":
             break
     print("You got" " " + str(score) + "/" + str(len(questions_no)) + " " "correct")
 
